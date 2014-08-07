@@ -1,5 +1,5 @@
 {
-    "name": "komola/bootstrap-zend-framework",
+    "name": "lciolecki/zf-twitter-bootstrap",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -15,8 +15,5 @@
     },
     "autoload": {
         "psr-0": { "Twitter_": "library"}
-    },
-    "include-path": [
-        "library/"
-    ]
+    }
 }
