@@ -109,10 +109,15 @@ class Twitter_FormNew extends Zend_Form
                 array(array("labelclosing" => "HtmlTag"), array("tag" => "label", "closeOnly" => true)),
                 array(new Twitter_Form_Decorator_Errors(), array("placement" => "append")),
                 array("Description", array("tag" => "span", "class" => "help-block")),
-                array(array("outerwrapper" => "HtmlTag"), array("tag" => "div", "class" => "checkbox")),
-                $this->getType() === self::FORM_TYPE_HORIZONTAL ?  array(array("innerwrapperpadding" => "HtmlTag"), array("tag" => "div", "class" => "col-sm-offset-2 col-sm-10")) : array(),
-                $this->getType() === self::FORM_TYPE_HORIZONTAL ? array(array("innerwrapper" => "HtmlTag"), array("tag" => "div", "class" => "form-group")) : array()
+                array(array("outerwrapper" => "HtmlTag"), array("tag" => "div", "class" => "checkbox"))
             ));
+
+            if ($this->getType() === self::FORM_TYPE_HORIZONTAL) {
+                $element->addDecorators(array(
+                    array(array("checkboxinnerwrapper" => "HtmlTag"), array("tag" => "div", "class" => "col-sm-offset-2 col-sm-10")),
+                    array(array("innerwrapper" => "HtmlTag"), array("tag" => "div", "class" => "form-group"))
+                ));
+            }
         }
 
         if ($element instanceof Zend_Form_Element_Radio || $element instanceof Zend_Form_Element_MultiCheckbox) {
