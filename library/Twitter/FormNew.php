@@ -31,11 +31,16 @@ class Twitter_FormNew extends Zend_Form
 
         // Decorators for the form itself
         $this->addDecorator("FormElements")
-             ->addDecorator('Form');
+            ->addDecorator('Form');
 
         parent::__construct($options);
     }
 
+    /**
+     *
+     *
+     * @return array
+     */
     protected function _getElementDecorators()
     {
         return array(
@@ -48,6 +53,11 @@ class Twitter_FormNew extends Zend_Form
         );
     }
 
+    /**
+     *
+     *
+     * @return array
+     */
     protected function _getElementDecoratorsOffset()
     {
         return array(
@@ -176,6 +186,12 @@ class Twitter_FormNew extends Zend_Form
         return $this;
     }
 
+    /**
+     *
+     *
+     * @param $element
+     * @return null|Zend_Form|Zend_Form_DisplayGroup
+     */
     private function _addActionsDisplayGroupElement($element)
     {
         $displayGroup = $this->getDisplayGroup("zfBootstrapFormActions");
