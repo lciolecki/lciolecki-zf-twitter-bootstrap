@@ -1,4 +1,4 @@
-An easy way to display forms with Zend Framework + Bootstrap
+An easy way to display forms with Zend Framework + Bootstrap 3
 ============================================================
 
 This is designed as an easy drop-in replacement for the normal Zend Forms to
@@ -7,24 +7,24 @@ work together with Twitter Bootstrap (http://twitter.github.com/bootstrap).
 Getting started
 ---------------
 
-Instaliation
-------------
+This library has decorators for basic and horizontal twitter forms (http://getbootstrap.com/css/#forms). For properly render Zend_Form_Element_MultiChocie and Zend_Form_Element_Radio plase add following styles:
 
-Composer way
+    .form-group-multi .checkbox,
+    .form-group-multi .radio {
+        padding-left: 20px;
+    }
+
+Instaliation
 ------------
 
 * Add this to your composer.json:
 
-        komola/bootstrap-zend-framework
-
-Old way
--------
-
-* Add this to your application.ini config:
-
-        autoloaderNamespaces.Twitter = "Twitter_"
-
-* Add the library/Twitter folder to your library
+    {
+        "minimum-stability": "dev",
+        "require": {
+            "lciolecki/zf-debug" : "dev-master"
+        }
+    }
 
 Usage
 -----

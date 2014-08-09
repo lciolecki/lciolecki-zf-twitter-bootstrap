@@ -24,10 +24,6 @@ class Twitter_Form_Decorator_Errors extends Zend_Form_Decorator_Errors
         $errors = $element->getMessages();
 
         if (empty($errors)) {
-            if ($wrapper) {
-                $wrapper->setOption("class", trim("has-success " . $wrapper->getOption("class")));
-            }
-
             return $content;
         }
 

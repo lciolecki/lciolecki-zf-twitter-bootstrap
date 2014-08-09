@@ -9,7 +9,10 @@
             "homepage": "http://komola.de"
         }
     ],
-    "description": "Twitter bootstrap for ZF1",
+    "description": "Twitter Bootstrap 3 for ZF1",
+    "keywords": [
+        "Zend Framework", "zf1", "twitter bootstrap 3"
+    ],
     "require": {
         "zendframework/zendframework1": "1.*"
     },
