@@ -21,7 +21,7 @@ Instaliation
     {
         "minimum-stability": "dev",
         "require": {
-            "lciolecki/zf-debug" : "dev-master"
+            "lciolecki/zf-twitter-bootstrap" : "dev-master"
         }
     }
 
