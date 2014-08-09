@@ -13,11 +13,10 @@ This library has decorators for basic and horizontal twitter forms (http://getbo
     .form-group-multi .radio {
         padding-left: 20px;
     }
+    
 
 Instaliation
-------------
-
-* Add this to your composer.json:
+---------------
 
     {
         "minimum-stability": "dev",
@@ -27,7 +26,7 @@ Instaliation
     }
 
 Usage
------
+---------------
 
 * Instead of extending from Zend\_Form extend from Twitter\_Form
 
@@ -35,12 +34,20 @@ We included a small example application that shows you what you can do with
 this.
 The interesting parts for our "library" are in /library/Twitter.
 
+    class Form_Example extends Twitter_Form
+    {
+        public function init()
+        {
+            $this->setType(self::FORM_TYPE_HORIZONTAL);
+        }
+    }
+
 Have fun!
 
 If you encounter any errors, please report them here on Github. Thanks!
 
 License
--------
+---------------
 
 Copyright (c) 2012-2013 Sebastian Hoitz, komola GmbH <hoitz@komola.de>
 
