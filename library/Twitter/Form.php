@@ -69,7 +69,7 @@ class Twitter_Form extends Zend_Form
             $element->removeDecorator("innerwrapper");
 
             if ($this->getType() === self::FORM_TYPE_HORIZONTAL) {
-                $this->_addActionsDisplayGroupElement($element);
+                $this->addActionsDisplayGroupElement($element);
             }
         }
 
